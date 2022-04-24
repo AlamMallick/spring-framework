@@ -11,26 +11,17 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Entity
 @Table(name = "employess")
-public class Employees extends BaseEntity{
+public class Employee extends BaseEntity{
 
 
 
 
     private String firstname;
     private String lastname;
-    @Column(columnDefinition = "DATE")
-    private LocalDate hireDate;
-
     private String email;
 
-    public Employees(String firstname, String lastname, LocalDate hireDate, String email, Gender gender, int salary) {
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.hireDate = hireDate;
-        this.email = email;
-        this.gender = gender;
-        this.salary = salary;
-    }
+    @Column(columnDefinition = "DATE")
+    private LocalDate hireDate;
 
     @Enumerated(EnumType.STRING)
     private Gender gender;
@@ -38,7 +29,12 @@ public class Employees extends BaseEntity{
     private int salary;
 
 
-
-
-
+    public Employee(String firstname, String lastname, String email, LocalDate hireDate, Gender gender, int salary) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
+        this.hireDate = hireDate;
+        this.gender = gender;
+        this.salary = salary;
+    }
 }
