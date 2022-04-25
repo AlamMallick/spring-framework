@@ -49,7 +49,12 @@ public class DataGenerator implements CommandLineRunner {
         departmentList.addAll(Arrays.asList(d1,d2,d3,d4,d5));
 
 
+        e1.setDepartment(d1);
+        e2.setDepartment(d2);
+        e3.setDepartment(d3);e4.setDepartment(d4);
+        e5.setDepartment(d5);
+
         employeeRepository.saveAll(employeeList);
-        departmentRepository.saveAll(departmentList);
+        //departmentRepository.saveAll(departmentList);
     }
 }

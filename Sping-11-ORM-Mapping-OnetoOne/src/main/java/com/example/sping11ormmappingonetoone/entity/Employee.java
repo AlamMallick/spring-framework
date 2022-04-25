@@ -28,6 +28,8 @@ public class Employee extends BaseEntity{
 
     private int salary;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    private Department department;
 
     public Employee(String firstname, String lastname, String email, LocalDate hireDate, Gender gender, int salary) {
         this.firstname = firstname;
