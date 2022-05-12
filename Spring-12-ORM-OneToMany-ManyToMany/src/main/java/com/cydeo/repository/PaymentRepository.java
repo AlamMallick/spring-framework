@@ -1,8 +1,9 @@
 package com.cydeo.repository;
 
-import com.cydeo.entity.Payments;
+import com.cydeo.model.Payment;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PaymentRepository extends JpaRepository<Payments,Long> {
+import java.util.List;
 
+public interface PaymentRepository extends JpaRepository<Payment,Long> {
 }
