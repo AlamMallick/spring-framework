@@ -25,10 +25,11 @@ public class Payment {
     private Status paymentStatus;
 
 
+
     @OneToOne(cascade = CascadeType.ALL)
     private PaymentDetail paymentDetail;
 
-    @ManyToOne
+    @ManyToOne // connecting many to one
     private Merchant merchant;
 
     @ManyToOne
