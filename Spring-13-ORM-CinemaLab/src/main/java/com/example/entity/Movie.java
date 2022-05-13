@@ -22,7 +22,9 @@ public class Movie extends BaseEntity{
     private Integer duration;
     @Column(columnDefinition = "TEXT")
     private String summary;
-    private
+    private MovieType type;
+    private MovieState state;
+
 
 
 }
