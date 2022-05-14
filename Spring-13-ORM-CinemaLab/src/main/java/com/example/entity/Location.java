@@ -9,8 +9,8 @@ import java.math.BigDecimal;
 @Entity
 @Data
 @NoArgsConstructor
+public class Location extends BaseEntity{
 
-public class Location extends BaseEntity {
     private String name;
     private BigDecimal latitude;
     private BigDecimal longitude;
@@ -19,8 +19,6 @@ public class Location extends BaseEntity {
     private String state;
     private String city;
     private String address;
-
-
 
 
 
