@@ -21,4 +21,7 @@ public class Location extends BaseEntity {
     private String address;
 
 
+
+
+
 }
