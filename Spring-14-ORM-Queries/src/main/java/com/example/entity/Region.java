@@ -11,8 +11,10 @@ import javax.persistence.Table;
 @Table(name = "regions")
 @Data
 @NoArgsConstructor
-public class Region extends BaseEntity {
+public class Region extends BaseEntity{
+
     private String region;
     private String country;
-
 }
+
+
