@@ -54,8 +54,11 @@ public interface EmployeeRepository extends JpaRepository<Employee,Long> {
     List<Employee> getEmployeeSalaryNotEqual(int salary);
 
 
+    @Query("SELECT e FROM Employee e order by e.salary desc ")
+    List<Employee> getEmployeeSalaryDesc();
 
-
+    @Query(value = "SELECT * FROM employee order by salary desc ", nativeQuery = true)
+    List<Employee> getSQLEmployeeSalaryDesc();
 
 
 

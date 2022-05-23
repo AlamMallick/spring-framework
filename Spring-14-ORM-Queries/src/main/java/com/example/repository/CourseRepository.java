@@ -3,6 +3,7 @@ package com.example.repository;
 
 import com.example.entity.Course;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 
 import java.util.List;
@@ -27,6 +28,9 @@ public interface CourseRepository extends JpaRepository<Course,Long> {
 
     //find all courses by category and returns a stream
     Stream<Course> streamByCategory(String category);
+
+
+
 
 
 
