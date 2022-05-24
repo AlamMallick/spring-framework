@@ -3,7 +3,9 @@ package com.example.entity;
 
 import com.example.enums.Gender;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -11,7 +13,9 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "employees")
-@Data
+@Setter
+@Getter
+
 @NoArgsConstructor
 public class Employee extends BaseEntity {
 
