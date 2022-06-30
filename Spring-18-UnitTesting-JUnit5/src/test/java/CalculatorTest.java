@@ -1,8 +1,14 @@
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
+
+    @BeforeAll
+    static void beforeAll(){
+        System.out.println("Before All");
+    }
 
     @Test
     void testCase01(){
@@ -11,13 +17,15 @@ class CalculatorTest {
 
     @Test
     void testCase02(){
-        fail("Not implemented yet ");
+        assertThrows(IllegalArgumentException.class,()->Calculator.add2(5,2));
 
     }
 
     @Test
     void testCase03(){
-        fail("Not implemented yet ");
+        Calculator c1=new Calculator();
+        Calculator c2=c1;
+       assertSame(c1,c2);
 
     }
 
